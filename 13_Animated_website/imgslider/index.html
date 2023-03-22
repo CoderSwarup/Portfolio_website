@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            /* overflow: hidden; */
+            scroll-behavior: smooth;
+            background: #2d3748;
+        }
+
+        .imgslider {
+            width: 600px;
+            margin: 100px auto;
+            /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+        }
+
+        .imgslider .track ul {
+            position: relative;
+            list-style: none;
+            padding: 0;
+            height: 400px;
+            width: 100%;
+
+        }
+
+        .imgslider .track ul li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            opacity: 0;
+            border: 2px solid yellow;
+            transition: opacity 2s;
+        }
+
+        .imgslider .track ul li:nth-child(1) {
+            opacity: 1;
+        }
+
+        .imgslider .track ul li:target {
+            opacity: 1;
+        }
+
+        .imgslider .track ul li img {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .slide {
+            display: flex;
+            width: 500px;
+            gap: 1rem;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .slide a {
+            border: 3px solid white;
+
+            height: 100px;
+        }
+
+        .slide a img {
+            /* width: 100%; */
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width :670px) {
+
+            .imgslider {
+                width: 400px;
+                margin: 100px auto;
+
+            }
+
+            .imgslider .track ul {
+                height: 200px;
+                width: 100%;
+
+            }
+
+            .imgslider .track ul li {
+
+                width: 100%;
+                height: 300px;
+
+            }
+
+            .slide {
+                display: flex;
+                width: 300px;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .slide a {
+                border: 3px solid white;
+                height: 60px;
+            }
+
+            .slide a img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imgslider">
+        <div class="track">
+            <ul>
+                <li id="slide1"><img src="./img1.jfif"" alt=""></li>
+                <li id=" slide2"><img src="./m.jfif" alt=""></li>
+                <li id="slide3"><img src="./imh3.jfif" alt=""></li>
+                <li id="slide4"><img src="./img4.jfif" alt=""></li>
+            </ul>
+        </div>
+        <div class="slide">
+            <a href="#slide1"><img src="./img1.jfif" alt=""></a>
+            <a href="#slide2"><img src="./m.jfif" alt=""></a>
+            <a href="#slide3"><img src="./imh3.jfif" alt=""></a>
+            <a href="#slide4"><img src="./img4.jfif" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

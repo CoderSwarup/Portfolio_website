@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body,
+html {
+
+    font-size: 60%;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('bg.webp');
+    /* background: #000; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 12rem; */
+    /* padding-left: 100px; */
+}
+
+.form {
+    width: 40%;
+    background: #222;
+    border: 3px solid lightblue;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 4px rgb(101, 101, 186);
+    /* overflow: hidden; */
+    text-align: center;
+}
+
+.content {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 5rem;
+    /* text-shadow: 5px 2px 2px lightblue; */
+    line-height: 13rem;
+}
+
+#Markform {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+
+input {
+    width: 70%;
+    height: 5rem;
+    padding: 5px 10px;
+    border: 1px solid lightblue;
+    /* margin: 10px; */
+    background: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: wheat;
+    border-radius: 5px;
+
+
+}
+
+input::placeholder {
+    color: wheat;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+input:focus-visible {
+    outline: 2px solid white;
+    color: lightblue;
+}
+
+.btn {
+    margin: 5px;
+    padding: 5px 15px;
+    background: rgb(87, 87, 237);
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.btn:hover {
+    background: rgb(58, 173, 255);
+
+}
+
+
+
+
+p {
+    color: white;
+    font-size: 4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width : 1100px) {
+    .background {
+        flex-direction: column-reverse;
+        align-items: center;
+        /* padding: 0px; */
+        gap: 3rem;
+        padding-left: 0px;
+    }
+
+    .form {
+        width: 70%;
+
+        padding: 5px;
+
+    }
+
+    .content {
+        text-shadow: none;
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+
+    #Markform {
+
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    p {
+        color: white;
+        font-size: 2rem;
+    }
+
+    input {
+        width: 70%;
+        height: 3rem;
+    }
+}
+
+@media screen and (max-width : 760px) {
+    .form {
+        width: 70%;
+        padding: 5px;
+
+    }
+
+    p {
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width : 320px) {
+
+    p {
+        color: white;
+        font-size: 1rem;
+    }
+}

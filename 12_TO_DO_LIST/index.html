@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./to-do-list.png">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="container">
+
+            <!-- TO DO LIST Input  -->
+            <header>
+                <h2>TO DO APP</h2>
+                <input type="text" id="todoinput" required="required" placeholder="Add To Do">
+                <div class="allbtns">
+                    <button id="forallbtn">Others</button>
+                    <button id="btnurgent">Urgent</button>
+                    <button id="btnnoturgent">Not Urgent</button>
+                    <button id="btnimp">Important</button>
+                </div>
+            </header>
+
+
+            <!-- Differnt type todo list with style -->
+            <div class="tabs">
+                <input type="radio" id="allT" name="todo" checked>
+                <input type="radio" id="UrgentT" name="todo">
+                <input type="radio" id="NUrgentT" name="todo">
+                <input type="radio" id="NImpT" name="todo">
+
+                <div class="buttons">
+                    <label for="allT">Others</label>
+                    <label for="UrgentT">Urgent</label>
+                    <label for="NUrgentT">Not Urgent</label>
+                    <label for="NImpT">Important</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="content">
+                    <div class="box allT">
+                        <!-- inner data -->
+                        <div class="data">
+                            <!-- todo container -->
+                            <div class="alldata">
+                                <!-- list all todos -->
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box UrgentT">
+                        <div class="data">
+                            <div class="dataurgent">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box NUrgentT">
+                        <div class="data">
+                            <div class="datanurgent">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box NImpT">
+                        <div class="data">
+                            <div class="impdata">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- <script src="./app.js"></script> -->
+    <script src="./extra.js"></script>
+</body>
+
+</html>

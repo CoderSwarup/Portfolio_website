@@ -1,0 +1,896 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    background: #2d3748;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    /* position: absolute; */
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #f59ce5, #C4DDFE);
+}
+
+.background::after {
+    content: '';
+    width: 95vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    background: #adf7f2eb;
+    border-radius: 100% 0 0 0%;
+    /* box-shadow: 1px 1px 5px black; */
+    z-index: -8;
+}
+
+
+header {
+    width: 100%;
+    background: transparent;
+    padding: 10px 50px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.logo {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.logo span {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    animation: logo 3s ease-in-out forwards;
+}
+
+@keyframes logo {
+    0% {
+        transform: translateY(-100px);
+        visibility: visible;
+
+    }
+
+    100% {
+        transform: translateY(0px);
+        visibility: visible;
+
+    }
+
+}
+
+ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+    animation: logo 3s ease-in-out 1s forwards;
+
+
+}
+
+ul li {
+    list-style: none;
+    color: black;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.6s ease;
+    border-bottom: 0px solid transparent;
+
+}
+
+/* .underline {
+    position: absolute;
+    width: 18%;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: black;
+    transition: 0.4s;
+
+} */
+ul li:nth-child(1):hover {
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+ul li:nth-child(2):hover {
+    border-bottom: 3px solid rgb(255, 0, 0);
+}
+
+ul li:nth-child(3):hover {
+    border-bottom: 3px solid rgb(255, 3, 150);
+}
+
+
+ul li:nth-child(4):hover {
+    border-bottom: 3px solid rgb(55, 0, 255);
+}
+
+.store img {
+    width: 25px;
+    filter: invert(100%);
+    background: linear-gradient(to top, #44b2ed, #C687FF);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: logo 3s ease-in-out forwards;
+
+}
+
+
+
+
+
+.container {
+    margin-top: 40px;
+    position: relative;
+    width: 100vw;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 70px;
+    gap: 1rem;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    visibility: hidden;
+    animation: left 3s ease-in-out 3.5s forwards;
+}
+
+
+@keyframes left {
+    0% {
+        transform: translateX(-550px);
+        visibility: visible;
+
+    }
+
+    100% {
+        transform: translateX(0px);
+        visibility: visible;
+
+    }
+
+}
+
+.left .btn1 {
+    width: 30%;
+    padding: 5px 15px;
+    border: transparent;
+    background: linear-gradient(to left, rgb(163, 163, 255), rgb(255, 98, 221));
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.left h2 {
+    font-size: 4rem;
+    font-weight: 900;
+
+}
+
+
+
+.left span {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.btn {
+    width: 20%;
+    display: flex;
+    gap: 2rem;
+    /* background: greenyellow; */
+    /* padding: 5px 10px; */
+}
+
+.btn button {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+}
+
+.btn button:nth-child(2) {
+    background: linear-gradient(to left, rgb(163, 163, 255), rgb(255, 98, 221));
+
+}
+
+
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+
+    animation: right 4s ease-in-out 4s forwards;
+}
+
+@keyframes right {
+    0% {
+        transform: scale(0);
+
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+
+}
+
+.circel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circel::before {
+    content: '';
+    position: absolute;
+    /* right: 5%; */
+    /* top: 1%; */
+    width: 80%;
+    height: 100%;
+    background: red;
+    z-index: -5;
+    border-radius: 100%;
+    background: linear-gradient(to right, #f59ce5, #C4DDFE);
+
+}
+
+.circel::after {
+    content: 'WINTER';
+    position: absolute;
+    z-index: -4;
+    top: 20%;
+    color: white;
+    /* left: 30%; */
+    font-weight: bolder;
+    font-size: 7rem;
+}
+
+
+.circel img {
+    width: 1000px;
+    /* margin-right: 25%; */
+}
+
+
+
+
+.fixed {
+    position: fixed;
+    left: 20px;
+    bottom: 10px;
+    /* transform: rotate(-90deg); */
+    font-size: 15px;
+    animation: fixed 3s ease-in-out forwards;
+
+
+}
+
+.fixed span {
+    margin: 0 10px;
+    color: black;
+    font-size: 15px;
+}
+
+@keyframes fixed {
+    0% {
+        transform: translateY(100px);
+        visibility: visible;
+
+    }
+
+    100% {
+        transform: translateY(0px);
+        visibility: visible;
+
+    }
+
+}
+
+
+
+@media screen and (max-width : 1000px) {
+    .container {
+
+        padding: 10px 20px;
+
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .left .btn1 {
+        width: 50%;
+        padding: 5px 10px;
+
+    }
+
+    .left h2 {
+        font-size: 3rem;
+        font-weight: 900;
+
+    }
+
+
+
+    .left span {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        /* width: 15%; */
+        display: flex;
+        gap: 1.8rem;
+        /* background: greenyellow; */
+        /* padding: 5px 10px; */
+    }
+
+    .btn button {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+
+    }
+
+    .btn button:nth-child(2) {
+        background: linear-gradient(to left, rgb(163, 163, 255), rgb(255, 98, 221));
+
+    }
+
+
+
+
+    .right {
+        width: 50%;
+
+    }
+
+
+
+    .circel {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circel::before {
+        content: '';
+        position: absolute;
+        /* right: 5%; */
+        /* top: 1%; */
+        width: 80%;
+        height: 100%;
+        background: red;
+        z-index: -5;
+        border-radius: 100%;
+        background: linear-gradient(to right, #f59ce5, #C4DDFE);
+
+    }
+
+    .circel::after {
+        content: 'WINTER';
+        position: absolute;
+        z-index: -4;
+        top: 20%;
+        color: white;
+        /* left: 30%; */
+        font-weight: bolder;
+        font-size: 4rem;
+    }
+
+
+    .circel img {
+        width: 500px;
+        /* margin-right: 25%; */
+    }
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width : 850px) {
+    .container {
+
+        padding: 10px 20px;
+
+    }
+
+
+
+    .left .btn1 {
+        width: 50%;
+        padding: 5px 10px;
+
+    }
+
+    .left h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+
+    }
+
+
+
+    .left span {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+
+        gap: 1.6rem;
+
+    }
+
+
+
+
+
+
+
+
+    .right {
+        width: 50%;
+
+    }
+
+
+
+    .circel {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circel::before {
+        content: '';
+        position: absolute;
+        /* right: 5%; */
+        /* top: 1%; */
+        width: 70%;
+        height: 100%;
+        background: red;
+        z-index: -5;
+        border-radius: 100%;
+        background: linear-gradient(to right, #f59ce5, #C4DDFE);
+
+    }
+
+    .circel::after {
+        content: 'WINTER';
+        position: absolute;
+        z-index: -4;
+        top: 20%;
+        color: white;
+        /* left: 30%; */
+        font-weight: bolder;
+        font-size: 3rem;
+    }
+
+
+    .circel img {
+        width: 400px;
+        /* margin-right: 25%; */
+    }
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width : 680px) {
+    .container {
+
+        padding: 10px 20px;
+        flex-direction: column;
+
+    }
+
+    .left {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .left .btn1 {
+        width: 30%;
+        padding: 5px;
+        font-size: 1rem;
+
+    }
+
+    .left h2 {
+        font-size: 2rem;
+        font-weight: 900;
+
+    }
+
+
+
+    .left span {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+
+
+
+
+
+
+
+    .right {
+        width: 80%;
+
+    }
+
+
+
+    .circel {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .circel::after {
+        font-size: 3.5rem;
+    }
+
+
+    .circel img {
+        width: 400px;
+        /* margin-right: 25%; */
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width : 500px) {
+
+    header {
+
+        padding: 10px 20px;
+    }
+
+
+
+
+    .logo {
+        width: 40%;
+
+
+    }
+
+    .logo span {
+        font-size: 1.4rem;
+    }
+
+
+    ul li {
+
+        padding: 5px 10px;
+        font-size: .7rem;
+
+
+    }
+
+    .container {
+
+        padding: 10px;
+        flex-direction: column;
+
+    }
+
+    .left {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .left .btn1 {
+        width: 30%;
+        padding: 5px;
+        font-size: 1rem;
+
+    }
+
+    .left h2 {
+        font-size: 2rem;
+        font-weight: 900;
+
+    }
+
+
+
+    .left span {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+
+
+
+
+
+
+
+    .right {
+        width: 80%;
+
+    }
+
+
+
+    .circel {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .circel::after {
+        font-size: 3.5rem;
+    }
+
+
+    .circel img {
+        width: 400px;
+        /* margin-right: 25%; */
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width : 500px) {
+
+    header {
+
+        padding: 10px 20px;
+    }
+
+
+    .logo span {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        display: none;
+    }
+
+
+    .container {
+        gap: 3rem;
+    }
+
+    .left {
+        width: 100%;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+
+    .left .btn1 {
+        width: 50%;
+        padding: 5px;
+        font-size: .8rem;
+
+    }
+
+    .left h2 {
+        font-size: 1.4rem;
+        font-weight: 900;
+
+    }
+
+    .left .btn1 {
+        width: 60% !important;
+    }
+
+
+    .left span {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+
+    .right {
+        width: 100%;
+
+    }
+
+    .circel::after {
+        font-size: 2.7rem;
+    }
+
+
+    .circel img {
+        width: 400px;
+        /* margin-right: 25%; */
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width : 400px) {
+
+    header {
+
+        padding: 10px 20px;
+    }
+
+
+    .logo span {
+        font-size: 1.3rem;
+    }
+
+
+
+    .container {
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+    .left .btn1 {
+        width: 35%;
+        padding: 5px;
+        font-size: .76rem;
+
+    }
+
+    .left h2 {
+        font-size: 1.4rem;
+        font-weight: 900;
+
+    }
+
+
+
+    .left span {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+
+    .right {
+        width: 100%;
+
+    }
+
+    .circel::after {
+        font-size: 2.5rem;
+    }
+
+
+    .circel img {
+        width: 300px;
+        /* margin-right: 25%; */
+    }
+
+
+    .fixed span {
+        margin: 0 10px;
+        color: black;
+        font-size: 8px;
+    }
+
+}

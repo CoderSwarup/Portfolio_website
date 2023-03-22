@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightblue;
+}
+
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    color: rgb(255, 184, 6);
+    text-shadow: 5px 2px 3px rgb(11, 7, 9);
+
+}
+
+h1 span {
+    color: red;
+}
+
+.container {
+    /* width: 600px; */
+    /* height: 260px; */
+    background: linear-gradient(220deg, rgb(255, 6, 255), rgb(63, 220, 255));
+    border: 6px solid rgb(255, 255, 255);
+    inset: 23px;
+    border-radius: 5px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    font-size: 4rem;
+    color: wheat;
+    font-weight: bold;
+}
+
+#ques {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    background: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.labelname {
+    font-size: 1rem;
+    width: 100%;
+    /* background-color: rgb(0, 255, 213); */
+    cursor: pointer;
+    padding: 2px 5px;
+    /* border: 2px solid rgb(223, 146, 4); */
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+i {
+    display: flex;
+    font-size: 0.7rem;
+    width: 50%;
+    background-color: rgba(24, 65, 58, 0.422);
+    cursor: pointer;
+    padding: 2px 5px;
+    color: white;
+    /* border: 2px solid rgb(223, 146, 4); */
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+input {
+    margin: 0 5px;
+    display: inline;
+}
+
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    gap: 5px;
+    /* flex-direction: column; */
+}
+
+
+.container2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+
+
+}
+
+
+
+#btn {
+    padding: 5px 16px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border: transparent;
+    background: linear-gradient(-220deg, rgb(255, 174, 255), rgb(125, 231, 255));
+    cursor: pointer;
+}
+
+#score {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#score span {
+    padding: 3px 8px;
+    background: wheat;
+}
+
+
+input[type="radio"] {
+    width: 10px;
+    /* display: none; */
+    /* visibility: hidden; */
+    /* background: greenyellow; */
+    display: inline;
+}
+
+
+.lablename1 {
+    padding: 5px;
+    font-size: 20px;
+    height: 22px;
+    letter-spacing: 2px;
+
+}
+
+input[type="radio"]:checked+label {
+    /* display: none; */
+    color: black;
+    background: rgb(212, 255, 148);
+}
+
+
+#score1 , #score{
+    color: black;
+}
+@media screen and (max-width : 750px) {
+
+    .labelname1 {
+        font-size: 2px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    i {
+
+        width: 100%;
+
+    }
+
+    #ques {
+        font-size: 1.2rem;
+    }
+
+    .labelname1 {
+        font-size: 15px;
+    }
+
+    .container {
+        font-size: 1.7rem;
+        color: wheat;
+        font-weight: bold;
+    }
+}

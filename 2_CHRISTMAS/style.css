@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: url("bg-img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* countdown  */
+.cotain {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110vw;
+    min-height: 110vh;
+    opacity: 1;
+    position: absolute;
+    z-index: 50;
+    /*  background: radial-gradient(#93d9f9, #0cb0b5);*/
+    /* background: radial-gradient(#f2f3f4, black); */
+    background-color: black;
+    font-family: 'David Libre', serif;
+    animation: op 0.6s linear 5.6s forwards;
+}
+
+@keyframes op {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.countdown:before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    filter: blur(14px);
+    animation: shadow 1s linear infinite;
+}
+
+@keyframes shadow {
+
+    0%,
+    100% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.countdown .number {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(270deg);
+    animation: animate 6s linear infinite;
+}
+
+
+.countdown .number:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.countdown .number:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.countdown .number:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.countdown .number:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.countdown .number:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.countdown .number:nth-child(6) {
+    animation-delay: 5s;
+}
+
+.countdown .number h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 20em;
+    color: #fff;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    10%,
+    100% {
+        transform: rotateY(-90deg);
+    }
+}
+
+
+/* countdown end  */
+
+/* css for neon */
+.cotain1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    /*  background: radial-gradient(#93d9f9, #0cb0b5);*/
+    /* background: radial-gradient(#f2f3f4, black); */
+    background-color: none;
+    font-family: 'David Libre', serif;
+}
+
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.neon {
+    font-family: neon;
+    color: #FB4264;
+    font-size: 6vw;
+    line-height: 6vw;
+    text-shadow: 0 0 3vw #F40A35;
+}
+
+
+
+.flux {
+    font-family: neon;
+    color: #426DFB;
+    font-size: 7vw;
+    line-height: 6vw;
+    text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        color: #FED128;
+    }
+
+    50% {
+        text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+        color: #806914;
+    }
+}
+
+.flux {
+
+    animation: flux 2s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        color: #28D7FE;
+    }
+
+    50% {
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+        color: #146C80;
+    }
+}
+
+.positios {
+    position: relative;
+    bottom: 0;
+    top: 230px;
+}
+
+/* santa backround  */
+
+#my-div {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index: -10;
+    transition: 0.2s ease-out;
+}
+
+#my-div img {
+    width: 140px;
+    filter: drop-shadow(0 0 20px rgb(1, 1, 42, 0.2));
+}
+
+
+/* moon  */
+.circle {
+    position: absolute;
+    z-index: -11;
+    top: 3%;
+    right: 40%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    inset: -200px -300px;
+    background: url('santa.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    animation: updown 5s ease-in-out infinite;
+}
+
+@keyframes updown {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+
+    }
+}
+
+
+/* snow  */
+
+.snow {
+    position: relative;
+    display: flex;
+
+}
+
+.snow span {
+    position: relative;
+    min-width: 5px;
+    height: 5px;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 1vw;
+    box-shadow: -100px 20px 5px #fff, 100px 20px 10px #fff;
+    animation: snow 10s linear infinite;
+    animation-delay: calc(80s / var(--i));
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}

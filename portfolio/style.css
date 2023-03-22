@@ -1,0 +1,183 @@
+@import '../css/style.css';
+
+body {
+    background: var(--light);
+}
+
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+.site-main-wrapper {
+    background: var(--light);
+    padding-bottom: 3rem;
+}
+
+
+.mylogo {
+    padding: 1rem 0;
+
+}
+
+
+.heading .main-heading .main-head {
+    width: 100%;
+    color: var(--primary);
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.heading .main-heading .main-head::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 170px;
+    height: 4px;
+    background: var(--primary);
+}
+
+.heading .main-heading .main-head::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 120px;
+    height: 4px;
+    background: var(--primary);
+}
+
+.container2 {
+    padding: 0 1rem;
+}
+
+.heading .sub-heading p {
+    color: var(--pure);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.heading .sub-heading h1 {
+    margin-top: 1.2rem;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.projects {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:765px) {
+    .projects {
+        justify-content: center;
+    }
+
+    .container2 {
+        padding: 0;
+    }
+}
+
+.projects .project {
+    width: 300px;
+    height: 400px;
+    background: var(--dark);
+    border-radius: 10px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.projects .project .img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.projects .project .img img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+    aspect-ratio: 300/180;
+}
+
+.projects .project .img img:hover {
+    transform: scale(1.2);
+}
+
+.projects .project .info {
+    padding: 10px 6px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+
+}
+
+.projects .project .info h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: all .5s ease-in-out;
+
+}
+
+.projects .project .info h2:hover {
+    color: var(--pure);
+    cursor: pointer;
+}
+
+.projects .project .info p {
+    color: var(--ternary);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.mybtn {
+    font-size: .9rem;
+    text-transform: uppercase;
+    padding: 3px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Christmas</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+
+    <body>
+
+        <div class="cotain">
+            <div class="countdown">
+
+                <div class="number">
+                    <h2 class="neon">5</h2>
+                </div>
+
+                <div class="number">
+                    <h2 class="flux">4</h2>
+                </div>
+
+                <div class="number">
+                    <h2 class="neon">3</h2>
+                </div>
+
+                <div class="number">
+                    <h2 class="flux">2</h2>
+                </div>
+
+                <div class="number">
+                    <h2 class="neon">1</h2>
+                </div>
+
+                <div class="number">
+                    <h2 class="flux">0</h2>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- div container 2 name  -->
+
+        <div class="cotain1">
+            <div class="neon positios">HAPPY </div>
+            <div class="flux positios">CHRISTMAS</div>
+        </div>
+
+
+        <div id="my-div">
+            <img src="santa-img.png" />
+
+        </div>
+
+        <div class="circle"></div>
+        <div class="snow">
+            <span style="--i:11"></span>
+            <span style="--i:14"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:13"></span>
+            <span style="--i:22"></span>
+            <span style="--i:15"></span>
+            <span style="--i:18"></span>
+            <span style="--i:17"></span>
+            <span style="--i:26"></span>
+            <span style="--i:19"></span>
+            <span style="--i:13"></span>
+            <span style="--i:20"></span>
+            <span style="--i:16"></span>
+            <span style="--i:12"></span>
+            <span style="--i:14"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:13"></span>
+            <span style="--i:13"></span>
+            <span style="--i:20"></span>
+
+            <span style="--i:11"></span>
+            <span style="--i:14"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:13"></span>
+            <span style="--i:22"></span>
+            <span style="--i:15"></span>
+            <span style="--i:18"></span>
+            <span style="--i:17"></span>
+            <span style="--i:26"></span>
+            <span style="--i:19"></span>
+            <span style="--i:13"></span>
+            <span style="--i:20"></span>
+            <span style="--i:16"></span>
+            <span style="--i:12"></span>
+            <span style="--i:14"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:13"></span>
+            <span style="--i:13"></span>
+            <span style="--i:20"></span>
+            <span style="--i:20"></span>
+        </div>
+
+    </body>
+    <!-- partial -->
+
+
+    <script>
+        let myDiv = document.getElementById("my-div");
+        //Detect touch device
+        function isTouchDevice() {
+            //We try to ccreate TouchEvent (it would fail for desktops and throw error)
+            try {
+                document.createEvent("TouchEvent");
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        const move = (e) => {
+            //try to aboidany errors for touch screens
+            try {
+                var x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+                var y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+            } catch (e) { }
+            //Set left and top of div based on mouse position
+            myDiv.style.left = x - 160 + "px";
+            myDiv.style.top = y - 160 + "px";
+        };
+
+        //For mouse
+        document.addEventListener("mousemove", (e) => {
+            move(e);
+        });
+        //For touch
+        document.addEventListener("touchmove", (e) => {
+            move(e);
+        });
+
+
+    </script>
+</body>
+
+</html>

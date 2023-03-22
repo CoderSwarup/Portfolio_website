@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+
+}
+
+
+/* body {
+    background: #e74;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%,
+            #c76075 80%, #e9b64b 95%);
+    background-image: radial-gradient(circle at center bottom, #e9b64b 2%,
+            #c76075 15%, #0d0d4b 75%, #190e14 90%);
+} */
+
+/* .f {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    z-index: 1;
+    animation: color1 8s forwards;
+}
+
+.s {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    animation-name: color2;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-duration: 20s;
+
+}
+
+@keyframes color1 {
+
+    0% {
+       
+    }
+
+    50% {
+        
+    }
+
+    100% {
+  
+        opacity: 0;
+    }
+}
+
+@keyframes color2 {
+
+    0% {
+        background-color: gold;
+        z-index: 22;
+    }
+
+    50% {
+        background-color: violet;
+        z-index: 2;
+
+    }
+
+    100% {
+        background-color: blue;
+        opacity: 0;
+        z-index: 2;
+    }
+} */
+
+.planerun {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e74;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%,
+            #c76075 80%, #e9b64b 95%);
+    background-image: radial-gradient(circle at center bottom, #e9b64b 2%,
+            #c76075 15%, #0d0d4b 75%, #190e14 90%);
+}
+
+.plane {
+    width: 860px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0px;
+    transform: scale(0);
+    animation: takeoff 4s linear forwards;
+}
+
+@keyframes takeoff {
+    0% {
+        transform: translateY(0px) scale(0);
+        /* width: 1860px; */
+    }
+
+    25% {
+        transform: translateY(130px) scale(0.6) translateZ(470px);
+        /* width: 2260px; */
+    }
+
+    50% {
+        transform: translateY(190px) scale(0.8) translateZ(970px);
+        /* width: 2660px; */
+    }
+
+    80% {
+        transform: rotateZ(22deg) scale(2.7) translateZ(1100px);
+        /* width: 3060px; */
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateZ(1600px) rotateZ(45deg) scale(4.3);
+        opacity: 0;
+    }
+}
+
+
+
+/* Text light */
+
+.text {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    margin: auto;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    animation: opa 5s linear 6.5s forwards;
+}
+
+
+@keyframes opa {
+    0% {
+        opacity: 0;
+    }
+
+    0.9% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.text1 {
+    display: inline-block;
+    position: relative;
+    font-size: 5vw;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 50;
+    text-align: center;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0004);
+    line-height: 0.70em;
+    outline: none;
+    opacity: 0;
+    animation: animatetext 5s linear infinite;
+
+
+}
+
+
+@keyframes animatetext {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92.1% {
+        color: #1d343b;
+        box-shadow: none;
+        opacity: 0.3;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    92.1%,
+    100% {
+        color: #eff;
+        opacity: 1;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px#03bcf4, 0 0 40px#03bcf4, 0 0 80px#03bcf4,
+            0 0 160px#03bcf4;
+    }
+}
+
+
+
+/* love neon */
+#canvas {
+    position: absolute;
+    /* z-index: 20; */
+    opacity: 1;
+}
+
+
+/* video */
+.video {
+    margin: 0;
+    padding: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    animation: hide 9s ease 4.1s forwards;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 0.5;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+/* @keyframes videowidth {
+    0% {
+        width: 10px;
+        height: 10px;
+
+    }
+
+    100% {
+        height: 1300px;
+        width: 2500px;
+
+
+    }
+} */
+
+video {
+    margin: 0;
+    padding: 0;
+    height: 1300px;
+    width: 2500px;
+
+    position: relative;
+    left: -45px;
+    animation-name: videowidth;
+    animation-duration: 5s;
+    animation-delay: 3.7s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+/* animation of bubbles*/
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #65d6ed, 0 0 100px #7de6f8;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff3d75;
+    box-shadow: 0 0 0 10px #ff3d7544, 0 0 50px #ff3d75, 0 0 100px #ff3d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+
+    }
+}
+
+
+/* animation of .bubbles 1 multi color is END  */
+
+
+/* white color animation is start  */
+
+
+.container1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.bubbles1 {
+    position: relative;
+    display: flex;
+}
+
+.bubbles1 span {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    background: #ffffff;
+    margin: 0 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #f8f8f844, 0 0 30px #ffffff, 0 0 70px #ffffff;
+    animation: animate2 15s linear infinite;
+    animation-duration: calc(100s / var(--z));
+}
+
+.bubbles1 span:nth-child(even) {
+    background: #ffffff;
+    box-shadow: 0 0 0 4px #ffffff44, 0 0 30px #fbfbfb, 0 0 70px #ffffff;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(100vh) scale(1);
+
+    }
+}

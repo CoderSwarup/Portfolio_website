@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: linear-gradient(144deg, #E100FF, #7D00FF);
+    /* background: #E100FF ; */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+
+header nav {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    margin: 0 15px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding-bottom: 6px;
+}
+
+nav .nav-links a:hover {
+    color: rgb(89, 0, 70);
+    border-bottom: 1px solid white;
+}
+
+
+nav .nav-links .nav-btn {
+    padding: 7px 14px;
+    margin: 0 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+}
+
+nav .nav-links .nav-btn:hover {
+    background: #fff;
+    color: #E100FF;
+}
+
+nav i {
+    display: none;
+}
+
+nav i img {
+    width: 30px;
+}
+
+.slider {
+    width: 100%;
+    /* height: 80vh; */
+    /* background: red; */
+    margin-top: 20px;
+    padding: 10px 20px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    /* overflow: hidden; */
+}
+
+.slider .slide {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column !important; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.slide .left {
+    width: 35%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.slide .right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+}
+
+
+.slide h1 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.slide p {
+    font-size: 20px;
+    color: white;
+}
+
+.slide .form {
+    width: 100%;
+    /* background: rgb(234, 45, 45); */
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* padding: 5px 10px; */
+}
+
+.slide .form input {
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid #ff0fd3;
+    border-radius: 15px;
+    color: #ff0fd3;
+}
+
+.slide .form button {
+    position: relative;
+    right: 99px;
+    margin-right: -100px;
+    border: none;
+    background: #E100FF;
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    /* height: 10px; */
+}
+
+.left h5 {
+    color: #fff;
+    letter-spacing: .5px;
+}
+
+.slide .right img {
+    width: 260px;
+}
+
+.slider-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.slider-btn button {
+    width: 150px;
+    text-align: center;
+    padding: 8px 18px;
+    margin: 0px;
+    background: rgb(174, 0, 255);
+    border: 2px solid #ff0fd3;
+    font-weight: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.slider-btn button span {
+    margin: 10px;
+}
+
+
+/* .slider-btn button:nth-child(1){
+    cursor: pointer;
+
+} */
+
+
+/* // all animations  */
+
+@keyframes textupdown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.3;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.slider .slick-active .left h1 {
+    /* visibility: hidden; */
+    animation: textupdown 2s forwards;
+}
+
+@keyframes paraslide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.slider .slick-active .left p {
+    animation: paraslide 2s ease forwards;
+
+}
+
+@keyframes formfade {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.slider .slick-active .form {
+    animation: formfade 3s ease forwards;
+
+}
+
+@keyframes simple {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slick-active .left h5 {
+    animation: simple 5s ease forwards;
+
+}
+
+@keyframes imgslide {
+    0% {
+        transform: translateY(90%);
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slick-active .right {
+    animation: imgslide 1s ease-in-out forwards;
+}
+
+
+/* media quyries */
+
+@media only screen and (max-width:1100px) {
+
+    .slide .left {
+        width: 45%;
+    }
+
+    .slide .right img {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+
+    header nav {
+        padding: 10px 10px;
+
+    }
+
+    nav .nav-links a {
+        margin: 0 10px;
+        font-size: 10px;
+        letter-spacing: .6px;
+        color: #fff;
+        padding-bottom: 5px;
+    }
+
+    .slide .left {
+        width: 40%;
+        gap: 2rem;
+    }
+
+    .slide .right {
+        width: 50%;
+
+    }
+
+    .slide .right img {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+
+    header nav {
+        padding: 8px 10px;
+
+    }
+
+    nav .nav-links a {
+        margin: 0 8px;
+        font-size: 10px;
+    }
+
+    .slide .left {
+        width: 50%;
+        gap: 2rem;
+    }
+
+    .slide .right {
+        width: 50%;
+
+    }
+
+    .slide .right img {
+        width: 270px;
+    }
+}
+
+
+
+@media only screen and (max-width:760px) {
+
+    header nav {
+        padding: 8px 10px;
+
+    }
+
+    nav {
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    nav .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        z-index: 1;
+        top: 0;
+        left: -120%;
+        margin-top: 50px;
+        background: linear-gradient(144deg, #E100FF, #cc00ff);
+        overflow: hidden;
+        transition: 1s ease-in-out;
+    }
+
+    nav .nav-links.add {
+        padding: 10px;
+        left: 0;
+        height: 200px;
+    }
+
+    nav i {
+        display: block;
+    }
+
+
+
+    .slide h1 {
+        font-size: 2rem;
+    }
+
+    .slide p {
+        font-size: 15px;
+
+    }
+
+    .slide .left {
+        width: 100%;
+        gap: 1.4rem;
+    }
+
+
+    .slide .right img {
+        width: 230px;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:500px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header nav {
+        padding: 8px 10px;
+
+    }
+
+
+    .slide h1 {
+        font-size: 1.3rem;
+    }
+
+    .slide p {
+        font-size: 10px;
+
+    }
+
+
+    .slide .form {
+        width: 100%;
+        /* background: rgb(234, 45, 45); */
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        /* padding: 5px 10px; */
+    }
+
+    .slide .form input {
+        height: 30px;
+        padding: 3px 8px;
+        border-radius: 9px;
+    }
+
+    .slide .form button {
+        /* display: none; */
+    }
+
+    .left h5 {
+        color: #fff;
+        letter-spacing: .5px;
+    }
+
+    .slide .left {
+        width: 100%;
+        gap: 1.4rem;
+    }
+
+
+    .slide .right img {
+        width: 220px;
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    .slide .right img {
+        width: 160px;
+    }
+
+    .slider-btn {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        gap: 7px;
+    }
+
+    .slider-btn button {
+        width: 100%;
+        padding: 5px 8px;
+        font-weight: 10px;
+        font-weight: 400;
+        letter-spacing: .5px;
+    }
+
+    .slider-btn button span {
+        margin: 5px;
+    }
+
+}
+
+
+@media only screen and (max-width:380px) {
+    .slide .right img {
+        width: 140px;
+    }
+}

@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 15px;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(160deg, rgb(255, 0, 255), rgb(60, 183, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main {
+    background: rgba(240, 240, 240, 0.68);
+    width: 600px;
+    height: 320px;
+    padding: 8px;
+    border-radius: 10px;
+    border-width: 33px;
+    border: 3px solid black;
+    box-shadow: 10px 15px 20px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+#qform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+
+.main h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 32px;
+    /* color: rgb(0, 102, 255);
+     */
+    color: rgb(255, 0, 102);
+}
+
+.main h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 42px;
+    color: rgb(0, 0, 0);
+}
+
+input {
+    padding: 5px 10px;
+    width: 300px;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(120deg, rgb(255, 0, 0), rgb(255, 247, 9), rgb(255, 174, 24));
+    border: transparent;
+
+}

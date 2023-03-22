@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backround {
+    width: 100vw;
+    height: 100vh;
+    background: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contain h1 {
+    font-size: 4rem;
+}
+
+.setting {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.setting i img {
+    width: 40px;
+    filter: invert(100%);
+}
+
+.setting-content {
+    display: flex;
+    gap: 1rem;
+    display: none;
+}
+
+.setting-content input {
+    padding: 0.6rem 1.3rem;
+    font-size: 1rem;
+
+}
+
+.setting-content button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: yellow;
+    color: red;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.time-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.time-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.time-container div {
+    font-size: 4rem;
+    color: white;
+}
+
+.center-time {
+    text-align: center;
+}

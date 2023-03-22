@@ -1,0 +1,261 @@
+
+    <div class="planerun">
+        <img class="plane" src="Airplane-vector-illustration-free-download-PNG.png" alt="">
+    </div>
+
+    <div class="text">
+        <canvas id="canvas" width="1400" height="600">
+        </canvas>
+        <h2 contenteditable="true" class="text1">THANKS</h2>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+
+    ############CSSS##########
+
+
+
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+
+}
+
+
+/* body {
+    background: #e74;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%,
+            #c76075 80%, #e9b64b 95%);
+    background-image: radial-gradient(circle at center bottom, #e9b64b 2%,
+            #c76075 15%, #0d0d4b 75%, #190e14 90%);
+} */
+
+/* .f {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    z-index: 1;
+    animation: color1 8s forwards;
+}
+
+.s {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    animation-name: color2;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-duration: 20s;
+
+}
+
+@keyframes color1 {
+
+    0% {
+       
+    }
+
+    50% {
+        
+    }
+
+    100% {
+  
+        opacity: 0;
+    }
+}
+
+@keyframes color2 {
+
+    0% {
+        background-color: gold;
+        z-index: 22;
+    }
+
+    50% {
+        background-color: violet;
+        z-index: 2;
+
+    }
+
+    100% {
+        background-color: blue;
+        opacity: 0;
+        z-index: 2;
+    }
+} */
+
+.planerun {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e74;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%,
+            #c76075 80%, #e9b64b 95%);
+    background-image: radial-gradient(circle at center bottom, #e9b64b 2%,
+            #c76075 15%, #0d0d4b 75%, #190e14 90%);
+}
+
+.plane {
+    width: 860px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0px;
+    transform: scale(0);
+    animation: takeoff 4s linear forwards;
+}
+
+@keyframes takeoff {
+    0% {
+        transform: translateY(0px) scale(0);
+        /* width: 1860px; */
+    }
+
+    25% {
+        transform: translateY(130px) scale(0.6) translateZ(470px);
+        /* width: 2260px; */
+    }
+
+    50% {
+        transform: translateY(190px) scale(0.8) translateZ(970px);
+        /* width: 2660px; */
+    }
+
+    80% {
+        transform: rotateZ(22deg) scale(2.7) translateZ(1100px);
+        /* width: 3060px; */
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateZ(1600px) rotateZ(45deg) scale(4.3);
+        opacity: 0;
+    }
+}
+
+
+
+/* Text light */
+
+.text {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #13272c;
+    margin: auto;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    animation: opa 5s linear 4.1s forwards;
+}
+
+
+@keyframes opa {
+    0% {
+        opacity: 0;
+    }
+
+    0.9% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.text1 {
+    display: inline-block;
+    position: relative;
+    font-size: 5rem;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 50;
+    text-align: center;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0004);
+    line-height: 0.70em;
+    outline: none;
+    opacity: 0;
+    animation: animatetext 5s linear infinite;
+
+
+}
+
+
+@keyframes animatetext {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92.1% {
+        color: #1d343b;
+        box-shadow: none;
+        opacity: 0.3;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    92.1%,
+    100% {
+        color: #eff;
+        opacity: 1;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px#03bcf4, 0 0 40px#03bcf4, 0 0 80px#03bcf4,
+            0 0 160px#03bcf4;
+    }
+}
+
+
+
+/* love neon */
+#canvas {
+    position: absolute;
+    z-index: 20;
+    opacity: 1;
+}

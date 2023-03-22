@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="main">
+            <h2>Score => <span id="score">0</span></h2>
+            <h3 id="showq">Question</h3>
+            <form action="s.php" id="qform">
+                <input  type="number" required step="0.01" name="answer">
+                <button class="btn" type="submit">Submit</button>
+            </form>
+            <span id="final">Lets Play</span>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

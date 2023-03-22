@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="My portfolio website is showcase the work I have done so far , the project i made using html css js and the services I provide ">
+    <meta name="keywords" content="HTML, CSS, JavaScript ,portfolio ,portfolio website">
+    <meta name="author" content="Swarup Bhise">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My awesome portfolio</title>
+</head>
+
+<body>
+    <div class="site-main-wrapper">
+        <!-- Hamberger menu icon -->
+
+        <div class="mnav">
+            <div class="mnav2 ">
+                <img class="logo" src="./images/logo.png" alt="">
+            </div>
+            <button aria-label="navbar" class="hamberger">
+                <img src="./images/hamberger.svg" alt="">
+            </button>
+        </div>
+
+        <!-- Mobile nav -->
+        <div class="mobile-nav">
+            <button aria-label="navbar" type="menu" class="times"><img src="./images/cancel.png" alt=""></button>
+            <ul>
+                <li><a class="close" href="#">Home</a></li>
+                <li><a class="close" href="#about">About</a></li>
+                <li><a class="close" href="#services">Services</a></li>
+                <li><a class="close" href="#bwork">Project</a></li>
+                <li><a class="close" href="#work">Work</a></li>
+                <li><a class="close" href="#contact">Contact</a></li>
+                <a href="./portfolio/portfolio.html"> <button class="btn btn-primary">Projects</button></a>
+
+            </ul>
+        </div>
+
+        <!-- hearder -->
+        <header>
+            <div class="container">
+
+                <!-- Nav bar -->
+                <nav id="main-nav" class="flex items-center justify-between">
+                    <div class="left flex items-center">
+                        <div class="branding">
+                            <img src="./images/logo.png" alt="">
+                        </div>
+                        <div>
+                            <a href="#">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#services">Services</a>
+                            <a href="#bwork">Project</a>
+                            <a href="#work">Work</a>
+
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="./portfolio/portfolio.html"> <button class="btn btn-primary">Projects</button></a>
+                    </div>
+                </nav>
+
+                <!-- Hero section -->
+
+                <div class="hero flex items-center justify-between">
+                    <div class="left flex-1 flex justify-center myprofile">
+                        <img src="./images/MyProfile.JPG" alt="">
+                    </div>
+                    <div class="right flex-1">
+                        <h6>Swarup Bhise</h6>
+                        <h1>I’m <br><span class="name">WebDeveloper</span></h1>
+                        <p>Hello, I'm Swarup Ramchandra Bhise, a front-end developer who creates beautiful and
+                            functional websites using HTML, CSS, and JavaScript. Browse my portfolio to see examples of
+                            my work, from client projects to personal ventures. Let's collaborate to bring your creative
+                            vision to life!</p>
+                        <div>
+                            <a href="https://my-cv-react-website.coderswarup101.repl.co/"> <button
+                                    class="btn btn-secondary">DOWNLOAD CV</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- About Section -->
+
+        <section id="about" class="about">
+            <div class="container flex items-center about-inner-wrap">
+                <div class="flex-1">
+                    <img class="about-me-img" src="./images/MYprofile2.jpg" alt="">
+                </div>
+                <div class="flex-1 right">
+                    <h1>About <span>Me</span></h1>
+                    <h3>Hello! i’m Swarup Bhise.</h3>
+                    <p>Hello! My name is Swarup Ramchandra Bhise, and I am an 18-year-old front-end developer with a
+                        passion for creating visually appealing and user-friendly websites. I specialize in using
+                        HTML, CSS, and JavaScript to design and develop websites that are both functional and
+                        aesthetically pleasing. I have a keen eye for detail and a strong understanding of user
+                        experience design principles, which helps me to create websites that are easy to navigate
+                        and engaging to use. With my skills and experience, I am confident that I can help you bring
+                        your website vision to life. Let's work together to create something amazing!</p>
+                    <div class="social">
+                        <a href="#"><i aria-label="Whatsapp" class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i aria-label="facebook" class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/swarup_bhise999/?igshid=ZDdkNTZiNTM%3D"><i
+                                aria-label="Instagram" class="fa-brands fa-instagram"></i></a>
+                        <a href="https://replit.com/@CoderSwarup101"><i aria-label="fa-code"
+                                class="fa-solid fa-code"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services  -->
+        <section id="services" class="services">
+            <div class="container">
+                <h1 class="section-heading"><span>Our </span>Services</h1>
+                <p>We provide high standar clean website for your business solutions</p>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <img src="./images/js.png" alt="">
+                        <h2>Frontend Developer</h2>
+                        <p>As a front-end developer, I specialize in creating visually appealing and user-friendly
+                            websites using HTML, CSS, and JavaScript And Other Frontend Technologies
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/fgma.png" alt="">
+                        <h2>Graphic Design</h2>
+                        <p>With a focus on user experience and attention to detail, I can help you design and develop
+                            websites that are not only aesthetically pleasing but also provide a seamless user
+                            experience
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="./images/extra.png" alt="">
+                        <h2>Extra Learn</h2>
+                        <p>From version control to front-end development and algorithmic programming, my diverse skill
+                            set allows me to approach challenges creatively and deliver customized solutions that exceed
+                            expectations
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- freelancing section -->
+        <section class="freelancer">
+            <h1>I Am Available For Freelancer.</h1>
+            <p>We provide high standar clean website for your business solutions</p>
+            <a href="https://my-cv-react-website.coderswarup101.repl.co/"> <button class="btn btn-primary">Download
+                    CV</button></a>
+        </section>
+
+        <!-- Slider section  our best project -->
+        <section class="reviews" id="bwork">
+            <div class="container">
+                <h1 class="section-heading">Our<span> Best 5 </span>Projects</h1>
+                <p>We provide high standar clean website for your business solutions</p>
+                <div class="slider">
+                    <div class="slide">
+                        <a href="/2_CHRISTMAS/index.html"> <img src="./images/project_img/2_Christmas.png" alt=""></a>
+                        <p>"Welcome to our Merry Christmas website! Get into the festive spirit with our holiday-themed
+                            articles, recipes, and activities. From decorating tips to gift ideas, we have everything
+                            you need to make your Christmas merry and bright!"</p>
+                        <span>Merry Christmas Website</span>
+                    </div>
+                    <div class="slide">
+                        <a href="/19_Custom_slider_animatation/index.html"><img
+                                src="./images/project_img/19_Slider_js.png" alt=""></a>
+                        <p>"A slider website using Slick Slider is a responsive and customizable solution for creating
+                            sliders and carousels with multiple slide types, navigation options, and effects. It can
+                            help showcase your content and enhance user engagement."</p>
+                        <span>Slider Website</span>
+                    </div>
+                    <div class="slide">
+                        <a href="/18_Fetch_Product_Search/index.html"> <img
+                                src="./images/project_img/18_Product_filter.png" alt=""></a>
+                        <p>"A product filter website is a platform that allows users to search and narrow down products
+                            based on their specific needs and preferences. It helps users find what they are looking for
+                            quickly and efficiently, leading to a better user experience and increased customer
+                            satisfaction."</p>
+                        <span>Product Filter Website</span>
+                    </div>
+                    <div class="slide">
+                        <a href="/10_MY_QUIZ_APP/index.html"> <img src="./images/project_img/10_Quiz_app_2.png"
+                                alt=""></a>
+                        <p>"A quiz website on frontend development is a platform that offers quizzes to test users'
+                            knowledge on various topics related to frontend development, such as HTML, CSS, JavaScript,
+                            and frameworks like React and Angular. These quizzes can help frontend developers test their
+                            skills, learn new concepts, and stay updated with the latest trends in the industry."</p>
+                        <span>Quiz Website</span>
+                    </div>
+                    <div class="slide">
+                        <a href="/3_WEBSITE/index.html"> <img src="./images/project_img/3_UsabilityHUb.png" alt=""></a>
+                        <p>"Creating a UsabilityHub website clone using HTML, CSS, and JS involves replicating the
+                            features and design of the original website, including usability tests, surveys, and user
+                            research tools. The website can help businesses and designers improve their products and
+                            user experiences by providing valuable feedback and insights."</p>
+                        <span>UsabilityHub Website clone</span>
+                    </div>
+
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+
+
+        <!--  Works Section  -->
+        <section id="work" class="work">
+            <div class="container">
+                <h1 class="section-heading"><span>Our</span> Works</h1>
+                <p>We provide high standar clean website for your business solutions</p>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="overlay">
+                            <span>💖Thanks Simple Animated Website Impress Your Friends 💖</span>
+                            <a href="/1_THANKS/index.html">Read More</a>
+                        </div>
+                        <img src="./images/project_img/1_thanks.png" alt="">
+                    </div>
+
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Merry Christmas Website With Mouse Move Effect</span>
+                            <a href="/2_CHRISTMAS/index.html">Read More</a>
+                        </div>
+                        <img src="./images/project_img/2_Christmas.png" alt="">
+                    </div>
+
+                    <div class="card">
+                        <div class="overlay">
+                            <span>💖 Happy New Year 2023 Website With Animation 🆕</span>
+                            <a href="/4_HAPPY_NEW_YEAR/index.html">Read More</a>
+                        </div>
+                        <img src="./images/project_img/3_New_Year.png" alt="">
+                    </div>
+
+                    <div class="card">
+                        <div class="overlay">
+                            <span>UsabilityHub Website Clone</span>
+                            <a href="/3_WEBSITE/index.html">Read More</a>
+                        </div>
+                        <img src="./images/project_img/3_UsabilityHUb.png" alt="">
+                    </div>
+
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Animated Website</span>
+                            <a href="/13_Animated_website/index.html">Read More</a>
+                        </div>
+                        <img src="./images/project_img/13_Animated_website.png" alt="">
+                    </div>
+
+                    <div class="card">
+                        <div class="overlay">
+                            <span>To Do List Website ✅</span>
+                            <a href="./12_TO_DO_LIST/index.html">Read More </a>
+                        </div>
+                        <img src="./images/project_img/12_To_Do_List.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h1 class="section-heading">Contact <span>Us</span></h1>
+                <p>We provide high standar clean website for your business solutions</p>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                        <h1>Call Us On</h1>
+                        <h6>+91 8507 123 785</h6>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h1>Email Us At</h1>
+                        <h6>swarupbhise999@gmail.com</h6>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h1>Visit Office</h1>
+                        <h6>153 Bhedshi , Sindhudurg , India</h6>
+                    </div>
+
+                </div>
+
+                <form action="">
+                    <div class="input-wrap">
+                        <input type="text" placeholder="Your Name *">
+                        <input type="email" placeholder="Your Email *">
+                    </div>
+                    <div class="input-wrap-2">
+                        <input type="text" placeholder="Your Subject...">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <a href="#"> <img class="footer-logo" src="./images/logo.png" alt=""></a>
+            <div class="footer-socials">
+                <a href="#"><i aria-label="Whatsapp" class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i aria-label="facebook" class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/swarup_bhise999/?igshid=ZDdkNTZiNTM%3D"><i aria-label="Instagram"
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://replit.com/@CoderSwarup101"><i aria-label="fa-code"
+                        class="fa-solid fa-code"></i></i></a>
+            </div>
+            <div class="copyright">
+                Copyright 2023 © Swarup Bhise
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/c125d7856d.js" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

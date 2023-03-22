@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #1F1F1F;
+    /* background: #2B2B2B; */
+    /* background: #303030; */
+
+}
+
+/* background */
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(220deg, #2B2B2B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+/* main container */
+.container {
+    position: relative;
+    width: 380px;
+    height: 600px;
+    background: rgb(0, 56, 74);
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    scrollbar-width: thin;
+    /* overflow: hidden; */
+    border-radius: 10px;
+    border: 3px solid rgb(138, 0, 122);
+}
+
+/* .container::before {
+    content: '';
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 130%;
+    background: green;
+    animation: r 11s ease-in-out infinite;
+}
+
+@keyframes r {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+
+} */
+
+.container::-webkit-scrollbar {
+    width: 0px;
+    /* background: purple; */
+    height: 20px;
+}
+
+/* top header */
+header {
+    /* width: 100%; */
+    /* height: 30%; */
+    position: relative;
+    background: wheat;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+header input {
+    padding: 5px 10px;
+    width: 90%;
+    color: #1F1F1F;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid red;
+    outline: none;
+    text-transform: capitalize;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+
+}
+
+header .allbtns {
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+}
+
+header .allbtns button {
+    width: 25%;
+    background: purple;
+    border: 1px solid rgb(22, 42, 226);
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    text-align: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+header .allbtns button:hover {
+    transform: translateY(-5px) skewY(-2deg);
+
+}
+
+header .allbtns button:nth-child(1) {
+    /* background: linear-gradient(to right, rgb(85, 255, 85), rgb(255, 124, 124), yellow); */
+    color: rgb(255, 255, 255);
+    /* font-size: 600; */
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+}
+
+header .allbtns button:nth-child(2) {
+    background: rgb(216, 26, 26);
+    color: white;
+}
+
+header .allbtns button:nth-child(3) {
+    background: rgb(255, 204, 0);
+
+    color: rgb(4, 3, 3);
+}
+
+header .allbtns button:nth-child(4) {
+    background: rgb(0, 255, 0);
+
+}
+
+
+/* container 2 */
+/* radio buttons css */
+.tabs input {
+    display: none;
+    visibility: hidden;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    /* background: linear-gradient(to right, red, orange); */
+    /* border-bottom: 1px solid black; */
+}
+
+/* radio button label */
+.buttons label {
+    width: 25%;
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    text-align: center;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tabs input:nth-child(1):checked~.buttons label:nth-child(1),
+.tabs input:nth-child(2):checked~.buttons label:nth-child(2),
+.tabs input:nth-child(3):checked~.buttons label:nth-child(3),
+.tabs input:nth-child(4):checked~.buttons label:nth-child(4) {
+    opacity: 1;
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    background: #fff;
+    height: 2px;
+    transition: 0.5s;
+}
+
+.tabs input:nth-child(1):checked~.buttons .underline {
+    left: 0;
+}
+
+.tabs input:nth-child(2):checked~.buttons .underline {
+    left: 24.4%;
+    background: red;
+
+
+}
+
+.tabs input:nth-child(3):checked~.buttons .underline {
+    left: 49.7%;
+    background: rgb(255, 255, 0);
+
+}
+
+.tabs input:nth-child(4):checked~.buttons .underline {
+    left: 74.7%;
+    background: rgb(30, 255, 30);
+}
+
+.content {
+    position: relative;
+    width: calc(380px * 4);
+    display: flex;
+    /* padding: 5px 20px; */
+    transition: 0.6s;
+    overflow: hidden;
+
+
+}
+
+.content .box {
+    position: relative;
+    width: 380px;
+    color: wheat;
+
+}
+
+/* switch tab animation  */
+.tabs input:nth-child(1):checked~.content {
+    left: calc(380px *0);
+}
+
+.tabs input:nth-child(2):checked~.content {
+    left: calc(380px * -1);
+}
+
+.tabs input:nth-child(3):checked~.content {
+    left: calc(380px * -2);
+}
+
+.tabs input:nth-child(4):checked~.content {
+    left: calc(380px * -3);
+}
+
+
+/* to data start */
+
+.data {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: #1F1F1F; */
+}
+
+.alldata,
+.dataurgent,
+.datanurgent,
+.impdata {
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 15px 10px;
+    transition: 0.7s;
+}
+
+
+
+
+
+.alldata div {
+    position: relative;
+    background: #fff;
+    color: rgb(15, 12, 12);
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.alldata .text {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.alldata img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 15px;
+}
+
+.todo-all {
+    background: rgba(134, 110, 106, 0.562) !important;
+    color: rgb(0, 0, 0) !important;
+    text-decoration: line-through;
+}
+
+/* .todo-all2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 70%;
+    height: 3px;
+    opacity: 0.7;
+    background: rgb(0, 0, 0);
+} */
+
+/* .todo-all .text {
+    color: rgb(152, 152, 152);
+    opacity: 0.5;
+    text-decoration: line-through;
+ } */
+
+/* .none {
+    display: none;
+} */
+
+
+
+
+/* data urgent  */
+
+
+.dataurgent div {
+    position: relative;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.dataurgent .text {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.dataurgent img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 15px;
+    filter: invert(100%);
+}
+
+
+
+
+
+
+/*  data not urgent */
+
+.datanurgent div {
+    position: relative;
+    background: rgb(242, 255, 0);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.datanurgent .text {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.datanurgent img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 15px;
+}
+
+
+
+/* important data  */
+
+
+
+.impdata div {
+    position: relative;
+    background: rgb(0, 255, 132);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.impdata .text {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.impdata img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 15px;
+}
+
+
+@media screen and (max-width : 430px) {
+    .container {
+
+        width: 340px;
+
+    }
+
+    .content {
+        position: relative;
+        width: calc(340px * 4);
+    }
+
+    .content .box {
+        position: relative;
+        width: 340px;
+        color: wheat;
+
+    }
+
+    .tabs input:nth-child(1):checked~.content {
+        left: calc(340px *0);
+    }
+
+    .tabs input:nth-child(2):checked~.content {
+        left: calc(340px * -1);
+    }
+
+    .tabs input:nth-child(3):checked~.content {
+        left: calc(340px * -2);
+    }
+
+    .tabs input:nth-child(4):checked~.content {
+        left: calc(340px * -3);
+    }
+
+    .buttons label {
+        font-size: 0.6rem;
+    }
+
+    header .allbtns button {
+
+        padding: 2px 5px;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width : 300px) {
+    .container {
+
+        width: 230px;
+
+    }
+
+    .content {
+        position: relative;
+        width: calc(230px * 4);
+    }
+
+    .content .box {
+        position: relative;
+        width: 230px;
+        color: wheat;
+
+    }
+
+    .tabs input:nth-child(1):checked~.content {
+        left: calc(230px *0);
+    }
+
+    .tabs input:nth-child(2):checked~.content {
+        left: calc(230px * -1);
+    }
+
+    .tabs input:nth-child(3):checked~.content {
+        left: calc(230px * -2);
+    }
+
+    .tabs input:nth-child(4):checked~.content {
+        left: calc(230px * -3);
+    }
+
+    .buttons label {
+        font-size: 0.5rem;
+    }
+
+    header .allbtns button {
+
+        padding: 2px 5px;
+        font-size: 0.4rem;
+    }
+}

@@ -1,0 +1,375 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(111deg, orange, yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    padding: 0 10px;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    /* height: 400px; */
+    padding: 20px;
+    border: 5px solid orangered;
+    border-radius: 15px;
+    background: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: linear-gradient(to top, rgb(252, 244, 0), rgb(255, 255, 255));
+    overflow: hidden;
+}
+
+.container h1 {
+    font-size: 1.5rem;
+}
+
+.input-container {
+    background: rgba(252, 206, 2, 0.598);
+    padding: 7px 0;
+    width: 80%;
+    /* height: 45px; */
+    text-align: center;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: copy;
+}
+
+
+
+
+
+
+.range {
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 0.4rem;
+    padding: 0;
+    background: rgb(22, 49, 223);
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 1.3rem;
+    width: 0.6rem;
+    background-color: red;
+}
+
+#label {
+    width: 25px;
+    background-color: black;
+    color: white;
+    padding: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.maincontainer {
+    position: relative;
+    margin-top: 20px;
+    /* width: 500px; */
+    width: calc(500px * 2);
+    /* width: 500px; */
+    /* padding: 5px 10px; */
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* background-color: red; */
+    /* gap: 0.5rem; */
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+.checkboxes {
+    width: 100%;
+    /* padding: 5px 10px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+    gap: 0.5rem;
+
+}
+
+.checks {
+    /* position: relative; */
+    /* margin: auto; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btn {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(254, 250, 250);
+    background: rgb(255, 0, 0);
+    border: 2px solid black;
+
+}
+
+input[type="checkbox"] {
+    accent-color: red;
+}
+
+
+.labeles {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    letter-spacing: 1.4px;
+}
+
+
+
+.tab {
+    width: 100%;
+}
+
+.tab .not {
+    visibility: hidden;
+    display: none;
+}
+
+.buttonsnew {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    /* background: red; */
+}
+
+.buttonsnew label {
+    width: 50%;
+    color: rgb(19, 10, 10);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* background-color: rgb(228, 128, 14); */
+    margin: 2px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.tab input:nth-child(1):checked~.buttonsnew label:nth-child(1),
+.tab input:nth-child(2):checked~.buttonsnew label:nth-child(2) {
+    opacity: 1;
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background: rgb(250, 3, 3);
+    transition: 0.7s;
+
+}
+
+.tab input:nth-child(1):checked~.buttonsnew .underline {
+    left: 0;
+}
+
+.tab input:nth-child(2):checked~.buttonsnew .underline {
+    left: 50%;
+}
+
+.maincontainer .box:nth-child(1) {
+    position: relative;
+    width: 500px;
+    left: -2%;
+}
+
+.maincontainer .box:nth-child(2) {
+    position: relative;
+    width: 500px;
+    left: 2%;
+}
+
+
+
+
+
+.tab input:nth-child(1):checked~.maincontainer {
+    left: calc(470px *0);
+}
+
+.tab input:nth-child(2):checked~.maincontainer {
+    left: calc(500px * -1);
+}
+
+.tab input:nth-child(2):checked~.range {
+    /* display: none; */
+    visibility: hidden;
+}
+
+.newbox {
+    position: relative;
+    width: 80%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+.boxes {
+    /* background: red; */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.boxes label {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+}
+
+
+#BTN {
+    width: 70%;
+    padding: 5px 10px;
+    background: orangered;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: transparent;
+    color: #fff;
+}
+
+input[type="radio"] {
+    accent-color: rgb(239, 92, 13);
+}
+
+
+
+
+
+
+/* Media queries */
+
+@media screen and (max-width :500px) {
+    .container h1 {
+        font-size: 1.3rem;
+    }
+
+    .input-container {
+        padding: 6px 0;
+        width: 80%;
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .buttonsnew label {
+        width: 50%;
+        padding: 4px 8px;
+        font-size: 1rem;
+
+    }
+
+    .container {
+        width: 450px;
+    }
+
+    .maincontainer {
+        width: calc(450px *2);
+    }
+
+    .maincontainer .box:nth-child(1) {
+        position: relative;
+        width: 400px;
+        left: -5.5%;
+    }
+
+    .maincontainer .box:nth-child(2) {
+        position: relative;
+        width: 400px;
+        left: 10%;
+    }
+
+}
+
+
+
+@media screen and (max-width :440px) {
+    .container h1 {
+        font-size: 1.2rem;
+    }
+
+    .input-container {
+        padding: 6px 0;
+        width: 85%;
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .buttonsnew label {
+        width: 50%;
+        padding: 3px 6px;
+        font-size: 1rem;
+
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .maincontainer {
+        width: calc(400px *2);
+    }
+
+    .maincontainer .box:nth-child(1) {
+        position: relative;
+        width: 400px;
+        left: -5%;
+    }
+
+    .maincontainer .box:nth-child(2) {
+        position: relative;
+        width: 400px;
+        left: 13%;
+    }
+
+}

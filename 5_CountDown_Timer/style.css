@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-box {
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(120deg, rgb(63, 255, 63), yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    font-family: 'Noto Serif', serif;
+}
+
+.text {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); */
+}
+
+.text:nth-child(2) {
+    margin-top: 20px;
+}
+
+.coloum {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.div {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 5px; */
+}
+
+input {
+    border-color: transparent;
+    /* border-radius: 10px; */
+    margin: 0 5px;
+    /* padding: px; */
+    width: 60%;
+    height: 60px;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+    background: rgb(8, 0, 91);
+    color: white;
+}
+
+label {
+    background: yellow;
+    width: 60%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width : 610px) {
+    .text {
+        font-size: 2rem;
+    }
+
+    .div {
+        width: 100px;
+    }
+
+    input {
+
+        width: 90%;
+    }
+
+    label {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .div {
+        width: 80px;
+    }
+
+    input {
+        font-size: 35px;
+        width: 90%;
+    }
+
+    label {
+        font-size: 15px;
+        width: 90%;
+    }
+}

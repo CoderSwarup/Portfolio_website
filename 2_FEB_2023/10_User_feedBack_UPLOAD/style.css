@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+p,
+h3 {
+    font-size: 1.7rem;
+}
+
+.feedback_section {
+    box-shadow: 0px 2px 10px 0px #000;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.7rem;
+    margin: 3rem 0;
+}
+
+:is(.unhappy, .happy, .Satisfied) p {
+    background: #fff1c9;
+    text-transform: uppercase;
+    font-size: 5rem;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 1.5rem 1.5rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    margin: 1rem 0;
+}
+
+:is(.unhappy, .happy, .Satisfied) p:hover {
+    scale: 1.05;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8), 0px 1px 4px rgb(51, 51, 51);
+}
+
+:is(.unhappy, .happy, .Satisfied) h3 {
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.f-btn {
+    display: grid;
+    place-items: center;
+
+}
+
+.btn {
+    padding: 7px 18px;
+    margin: auto;
+    background: #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.active {
+    scale: 1.1;
+    color: red;
+    /* box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8), 0px 1px 4px rgb(51, 51, 51); */
+}
+
+.response {
+    padding: .5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.user_response {
+    background: #ffeab0;
+    padding: .3rem;
+}
+
+.user_response p {
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.user_response h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.response h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+@media screen and (max-width:420px) {
+    html {
+        font-size: 53.5%;
+    }
+
+    body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    p,
+    h3 {
+        font-size: 2rem;
+    }
+
+    .feedback_section {
+
+        padding: 2rem 1rem;
+
+    }
+
+    .user_response {
+        background: #ffeab0;
+        padding: .9rem;
+    }
+
+    .user_response p {
+        font-size: 8rem;
+        margin-bottom: 10px;
+    }
+
+    .user_response h3 {
+        font-size: 2rem;
+
+    }
+
+
+}

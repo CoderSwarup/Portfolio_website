@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Login & SignUp Page</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sign">
+        <h1 class="signclick">Sign Up</h1>
+        <form class="signf">
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter Name"
+            required
+          />
+          <input type="email" name="email" placeholder="Email" required />
+          <div class="password">
+            <input
+              type="password"
+              name="Password"
+              placeholder="Password"
+              autocomplete="on"
+              required
+            />
+          </div>
+          <input type="submit" value="Sign Up" />
+        </form>
+      </div>
+      <div class="login">
+        <h1 class="loginclick">Log In</h1>
+        <form class="loginf">
+          <input type="email" placeholder="Enter Email" name="email" required />
+          <div class="password">
+            <input
+              type="password"
+              name="Password"
+              placeholder="Password"
+              autocomplete="on"
+              required
+            />
+          </div>
+          <input type="submit" value="LogIn" />
+        </form>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

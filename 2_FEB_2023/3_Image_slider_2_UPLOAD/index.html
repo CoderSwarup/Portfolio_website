@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE SLIDER</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="bg">
+        <div class="main">
+            <h1 style="color: #fff;">Slider Right Left</h1>
+            <div class="container">
+                <img src="./movie-2.png" class="slide" alt="">
+                <img src="./movie-3.png" class="slide" alt="">
+                <img src="./movie-4.png" class="slide" alt="">
+                <img src="./movie-5.png" class="slide" alt="">
+
+            </div>
+
+            <div class="btn">
+                <button class="arrow prev" onclick="onprev()">LEFT</button>
+                <button class="arrow next" onclick="onnext()">RIGHT</button>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="main">
+            <h1 style="color: #fff;">Slider top bottom</h1>
+            <div class="container">
+                <img src="./movie-2.png" class="slide1" alt="">
+                <img src="./movie-3.png" class="slide1" alt="">
+                <img src="./movie-4.png" class="slide1" alt="">
+                <img src="./movie-5.png" class="slide1" alt="">
+
+            </div>
+
+            <div class="btn">
+                <button class="arrow prev" onclick="ontop()">TOP</button>
+                <button class="arrow next" onclick="onbottom()">BOTTOM</button>
+            </div>
+        </div>
+
+        <script src="./app.js"></script>
+</body>
+
+</html>

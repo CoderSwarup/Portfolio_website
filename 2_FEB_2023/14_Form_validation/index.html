@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>REGISTER NOW</h1>
+        </div>
+        <form action="" id="form">
+            <div class="form-control ">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Your Name">
+                <i class="fa-regular fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter Your Email">
+                <i class=" fa-regular fa-circle-check"></i>
+                <i class="  fa-solid fa-circle-exclamation"></i>
+                <small class="">Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="phno">Phone Number</label>
+                <input type="number" maxlength="10" name="phoonenumber" id="phno" placeholder="Enter Your Phone Number">
+                <i class="fa-regular fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="passwd">Password</label>
+                <input type="text" name="passwd" id="passwd" placeholder="Enter Your Password">
+                <i class="fa-regular fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="cpassswd">Confirm Password</label>
+                <input type="text" name="cpassswd" id="cpasswd" placeholder="Enter Your password Again">
+                <i class="fa-regular fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small>Error Message</small>
+            </div>
+
+            <input type="submit" value="submit" class="btn">
+        </form>
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

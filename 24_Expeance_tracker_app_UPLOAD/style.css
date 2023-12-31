@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 15px;
+    background: #111;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    position: relative;
+    width: 380px;
+    height: 580px;
+    background: rgb(34, 34, 34);
+    border-radius: 0px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center;
+    align-items: flex-start; */
+    flex-direction: column;
+    gap: 1rem;
+    /* background: rgb(173, 62, 62); */
+    text-align: center;
+}
+
+.main h2 {
+    color: #fff;
+}
+
+.main .price p {
+    color: #fff;
+    font-size: 19px;
+}
+
+.main h3 {
+    text-align: left;
+    text-transform: capitalize;
+    color: rgb(222, 222, 222);
+    padding-bottom: 3px;
+    border-bottom: 1px solid white;
+}
+
+
+/*  credit list */
+.main .transcation-list {
+    width: 100%;
+    padding-bottom: 150px;
+    overflow-y: scroll;
+}
+
+.main .transcation-list::-webkit-scrollbar {
+    display: none;
+    /* width: 5px;
+    background: #fff; */
+}
+
+/* .main .transcation-list::-webkit-scrollbar-thumb {
+    background-color: green;
+} */
+
+.main .transcation-list .credit-list {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .transcation-list .credit-list .Cnew {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .transcation-list .credit-list .Clower {
+    width: 100%;
+    text-align: left;
+    padding: 6px 10px;
+    border: 2px dotted rgb(4, 255, 13);
+    background: #fff;
+    transition: 0.5s linear;
+    opacity: 0;
+    display: none;
+}
+
+.main .transcation-list .credit-list .Clower.Cshow {
+    display: block;
+    opacity: 1;
+    background: #333;
+
+}
+
+.main .transcation-list .credit-list .input {
+    width: 100%;
+    padding: 3.5px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    border: transparent;
+}
+
+.main .transcation-list .credit-list .input h3 {
+    color: #000;
+    font-size: 16px;
+}
+
+.main .transcation-list .credit-list .input span {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main .transcation-list .credit-list h4 {
+    padding: 4px 7px;
+    height: 100%;
+    font-size: 19px;
+    font-weight: 800;
+    color: #fff;
+    background: green;
+}
+
+
+
+/* debit list */
+
+
+.main .transcation-list .debit-list {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.main .transcation-list .debit-list .Dnew {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .transcation-list .debit-list .Dlower {
+    width: 100%;
+    text-align: left;
+    padding: 6px 10px;
+    border: 2px dotted rgb(248, 7, 7);
+    background: #fff;
+    transition: 0.5s linear;
+    opacity: 0;
+    display: none;
+}
+
+.main .transcation-list .debit-list .Dlower.Dshow {
+    display: block;
+    opacity: 1;
+    background: #333;
+}
+
+.main .transcation-list .debit-list .input {
+    width: 100%;
+    padding: 3.5px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    border: transparent;
+}
+
+.main .transcation-list .debit-list .input h3 {
+    color: #000;
+    font-size: 16px;
+}
+
+.main .transcation-list .debit-list .input span {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main .transcation-list .debit-list h4 {
+    padding: 4px 7px;
+    height: 100%;
+    font-size: 19px;
+    font-weight: 800;
+    color: #fff;
+    background: rgb(255, 2, 2);
+}
+
+
+
+/* edit delete btn  */
+
+.main .transcation-list .edit {
+    padding: 3px 6px;
+
+    font-weight: 600;
+    color: #000;
+    border: transparent;
+    background-color: rgb(6, 255, 6);
+    box-shadow: 0 2px 10px #111;
+}
+
+.main .transcation-list .delete {
+    padding: 3px 6px;
+    float: right;
+    margin-left: 15px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 2px 10px #111;
+}
+
+
+/* bottom main input  */
+
+.main-input {
+    width: 100%;
+    padding: 8px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    display: grid;
+    gap: 1rem;
+}
+
+
+.main-input h2 {
+    font-size: 1.3rem;
+}
+
+.main-input .text-ammount {
+    width: 100%;
+    /* padding: 5px ; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* background: red; */
+
+}
+
+.main-input .text-ammount .text {
+    /* background-color: green; */
+    width: 55%;
+}
+
+.main-input .text-ammount .amount {
+    /* background-color: green; */
+    width: 44%;
+}
+
+.main-input .text-ammount span {
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.main-input .text-ammount input {
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.main-input .buttons {
+    width: 100%;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-input .buttons button {
+    width: 50%;
+    padding: 6px;
+    border: transparent;
+    font-size: 13px;
+    color: white;
+    background: green;
+}
+
+.main-input .buttons button:nth-child(2) {
+    background: red;
+}
+
+
+@media screen and (max-width:400px) {
+
+    .app {
+        width: 300px;
+        height: 530px;
+    }
+
+    .main {
+        gap: .7rem;
+    }
+
+    .main h2 {
+
+        font-size: 1.6rem;
+    }
+
+    .main .price p {
+
+        font-size: 14px;
+    }
+
+
+    .main .transcation-list {
+        padding-bottom: 150px;
+    }
+
+
+
+    /*  credit list */
+
+    .main .transcation-list .credit-list {
+
+        margin: 15px 0;
+    }
+
+
+    .main .transcation-list .credit-list .input h3 {
+        font-size: 12px;
+    }
+
+    .main .transcation-list .credit-list .input span {
+        color: #000;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .main .transcation-list .credit-list h4 {
+        font-size: 14px;
+    }
+
+
+    /* debit-list */
+    .main .transcation-list .debit-list {
+
+        margin: 15px 0;
+    }
+
+
+    .main .transcation-list .debit-list .input h3 {
+        font-size: 12px;
+    }
+
+    .main .transcation-list .debit-list .input span {
+        color: #000;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .main .transcation-list .debit-list h4 {
+        font-size: 14px;
+    }
+
+
+
+    /* bottom input */
+
+    .main-input {
+        padding: 0px;
+        gap: .7rem;
+    }
+
+
+    .main-input h2 {
+        margin-left: 5px;
+        font-size: 1.2rem;
+    }
+
+    .main-input .text-ammount {
+        padding: 0 5px;
+    }
+
+
+    .main-input .text-ammount span {
+        font-size: 13px;
+    }
+
+    .main-input .text-ammount input {
+        padding: 3px 7px;
+        margin-top: 6px;
+    }
+
+    .main-input .buttons button {
+        padding: 3px;
+        font-size: 11px;
+    }
+
+
+}

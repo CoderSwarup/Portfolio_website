@@ -1,0 +1,543 @@
+@import './style.css';
+
+@media screen and (max-width:1100px) {
+
+    header nav .navbar {
+        top: -100%;
+        right: 4vw;
+        width: 250px;
+        position: absolute;
+        background: var(--dark);
+        z-index: 1;
+        transition: .4s ease;
+    }
+
+    header nav .navbar.menu {
+        top: 80px;
+    }
+
+    header nav .navbar ul {
+        border-radius: 20px;
+        border: 2px solid var(--pure);
+        padding: 30px 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        /* background: var(--dark); */
+    }
+
+
+    header nav .navbar ul li a::after {
+        bottom: -10px;
+    }
+
+    header nav .navbar ul li a.active::after {
+        bottom: -10px;
+        width: 0;
+    }
+
+    header nav .navbar ul li a.active:hover::after {
+        width: 100%;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .toggle img {
+        width: 30px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    footer {
+        padding: 60px 30px;
+    }
+
+    .contain {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 910px) {
+
+    .hero .social-links {
+        width: 70px;
+    }
+
+    .hero .social-links div {
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+    .hero .social-links div img {
+        width: 20px;
+    }
+
+    .container .left-section p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+
+
+    .container .right-section img {
+        height: 50vh;
+    }
+
+
+
+    .contain {
+        flex-wrap: wrap;
+    }
+
+    .contain ul li {
+        font-size: 15px;
+    }
+
+    .contain img {
+        width: 200px;
+    }
+
+    .contain .copyright p {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .contain .about h2 {
+        font-size: 20px;
+    }
+
+    .rocket .right_blog .sticky {
+
+        margin-right: 20px;
+    }
+
+
+    .rocket .right_blog .sticky img {
+        width: 130px;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .rocket {
+        grid-gap: 70px;
+        padding: 100px 50px;
+    }
+
+    .searchbar {
+        display: none !important;
+    }
+
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .container .right-section img {
+        height: 40vh;
+    }
+
+
+    .rocket {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 70px 1fr;
+        padding: 100px 30px;
+    }
+
+
+
+    .rocket .rocket_body span.active:nth-child(1)::after {
+        width: 60px;
+    }
+
+    .rocket .rocket_body span.active:nth-child(2)::after {
+        width: 80px;
+    }
+
+
+    .rocket .rocket_body span:nth-child(3)::after {
+        bottom: 90%;
+        right: 100%;
+    }
+
+    .rocket .rocket_body span.active:nth-child(3)::after {
+        width: 70px;
+    }
+
+    .rocket .rocket_body span:nth-child(3)::before {
+        bottom: 30%;
+
+    }
+
+    .rocket .rocket_body span.active:nth-child(3)::before {
+        width: 70px;
+    }
+
+
+    .rocket .blog {
+        position: relative;
+        width: 90%;
+    }
+
+    .rocket .blog h1 {
+        font-size: 20px;
+    }
+
+
+    .underline {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .rocket .blog h1.underline::before {
+        width: 40%;
+    }
+
+    .rocket .blog h2 {
+        font-size: 22px;
+    }
+
+    .withbtn {
+        padding-top: 50px;
+    }
+
+
+
+
+    .blog h2 {
+        padding-left: 60px;
+    }
+
+
+    .withbtn h1 {
+        font-size: 20px !important;
+    }
+
+
+    .rocket .capacity h4 span {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .rocket .capacity {
+
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+
+    .rocket .right_blog .engine {
+        padding-top: 20px;
+    }
+
+    .rocket .right_blog .engine img {
+        width: 130px;
+    }
+
+    .rocket .right_blog .marine {
+        padding-top: 40px;
+    }
+
+    .marine h2 {
+        font-size: 14px !important;
+
+    }
+
+
+    .rocket .right_blog .sticky img {
+        width: 140px;
+    }
+
+    .para {
+        font-size: 13px !important;
+    }
+
+
+    footer {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header nav {
+        background: #0000003a;
+        padding: 17px 20px;
+    }
+
+
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        min-height: calc(100vh - 100px);
+        gap: 0;
+    }
+
+    .container div {
+        display: grid;
+        text-align: center;
+        place-items: center;
+        width: 100%;
+        padding: 0 30px;
+        margin: 0;
+
+    }
+
+    .container .left-section {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .left-section button {
+        margin-top: 10px !important;
+    }
+
+
+    footer {
+        background: var(--dark);
+        padding: 60px 10px;
+
+    }
+
+    .contain {
+        width: 100%;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .contain ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contain ul li {
+        font-size: 14px;
+    }
+
+
+    .underline {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .underline::before {
+        width: 15%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+
+    .rocket .right_blog .engine img {
+        width: 100px;
+    }
+
+    .rocket .right_blog .sticky img {
+        width: 100px;
+    }
+
+    nav .logo img {
+        width: 180px;
+    }
+
+    .toggle img {
+        width: 25px;
+    }
+
+    .contain ul li {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+
+    .rocket {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 60px 1fr;
+        padding: 100px 5px;
+    }
+
+
+
+    .rocket .rocket_body span.active:nth-child(1)::after {
+        width: 30px;
+    }
+
+    .rocket .rocket_body span.active:nth-child(2)::after {
+        width: 30px;
+    }
+
+
+    .rocket .rocket_body span:nth-child(3)::after {
+        bottom: 90%;
+        right: 100%;
+    }
+
+    .rocket .rocket_body span.active:nth-child(3)::after {
+        width: 70px;
+    }
+
+    .rocket .rocket_body span:nth-child(3)::before {
+        bottom: 30%;
+
+    }
+
+    .rocket .rocket_body span:nth-child(3)::before {
+
+        bottom: 45%;
+
+
+    }
+
+    .rocket .rocket_body span.active:nth-child(3)::before {
+        width: 30px;
+    }
+
+
+    .rocket .blog {
+        position: relative;
+        width: 100%;
+    }
+
+    .rocket .blog h1 {
+        font-size: 20px;
+    }
+
+
+    .underline {
+        padding-top: 10px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .rocket .blog h1.underline::before {
+        width: 40%;
+    }
+
+    .rocket .blog h2 {
+        font-size: 18px;
+    }
+
+    .withbtn {
+        padding-top: 30px;
+    }
+
+
+    .blog h2 {
+        padding-left: 30px;
+    }
+
+
+    .withbtn h1 {
+        font-size: 20px !important;
+    }
+
+
+    .rocket .capacity h4 span {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .rocket .capacity {
+
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+
+    .rocket .right_blog .engine {
+        padding-top: 10px;
+    }
+
+    .rocket .right_blog .engine img {
+        width: 100px;
+    }
+
+    .rocket .right_blog .marine {
+        padding-top: 20px;
+    }
+
+    .marine h2 {
+        font-size: 14px !important;
+
+    }
+
+    .rocket .right_blog .sticky img {
+        width: 120px;
+    }
+
+    .para {
+        font-size: 8px !important;
+    }
+
+
+    .btn2 {
+        margin-top: 20px;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 7px 14px;
+        border-radius: 30px;
+    }
+
+    .rocket .capacity h4 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .rocket .capacity h4 span {
+        font-size: 15px;
+        font-weight: 500;
+
+    }
+
+    .rocket .capacity {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .capacity2 {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px !important;
+    }
+
+    .blog2 {
+        padding-top: 60px;
+    }
+
+    .container .left-section p {
+        font-size: 9px;
+        letter-spacing: 2px;
+        line-height: 20px;
+    }
+
+    .btn {
+        font-size: 11px;
+        font-weight: 500;
+        padding: 6px 13px;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) {}

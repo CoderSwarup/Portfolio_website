@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(255, 66, 255, 0.694);
+}
+
+nav {
+    padding: 6px 37px;
+    background: rgb(172, 3, 172);
+    color: wheat;
+    box-shadow: 0px 0px 40px #ffffff9a;
+}
+
+.main_container {
+    position: relative;
+}
+
+.line {
+    height: 0;
+    width: 0;
+    background: #f200ff;
+    transition: width 1s ease;
+    /* transform: translate(2vw, 14vw) rotate(45deg); */
+}
+
+.game_container {
+    width: 90vw;
+    padding: 10px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 40px auto;
+    color: #fff;
+
+}
+
+.game {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.game div {
+    border: 2px solid #000;
+    font-size: 8vw;
+    text-align: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
+
+
+.bt-0 {
+    border-top: 0 !important;
+}
+
+.bl-0 {
+    border-left: 0 !important;
+}
+
+.br-0 {
+    border-right: 0 !important;
+}
+
+.bb-0 {
+    border-bottom: 0 !important;
+}
+
+.info h1 {
+    font-size: 2.3rem;
+}
+
+.info,
+.score_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: #010101;
+}
+
+.score_info .info_msg {
+    font-size: 22px;
+}
+
+.score_info button {
+    padding: 4px 17px;
+    text-transform: uppercase;
+    border: none;
+    background: purple;
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.image img {
+    width: 270px;
+    visibility: hidden;
+}
+
+@media screen and (max-width:730px) {
+    .game_container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image img {
+        width: 180px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .game {
+
+        display: grid;
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 15vw);
+        text-align: center;
+    }
+
+    .game div {
+
+        font-size: 12vw;
+
+    }
+
+
+
+    .game_container {
+
+        padding: 10px;
+        margin: 5px auto;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    .info h1 {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+}

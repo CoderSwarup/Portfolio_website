@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" id="root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Counter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="navlogo">
+                <h1>Text Counter</h1>
+            </div>
+            <div class="nav_theme">
+                <button class="theme" onclick="themeclick('black')"></button>
+                <button class="theme" onclick="themeclick('red')"></button>
+                <button class="theme" onclick="themeclick('yellow')"></button>
+                <button class="theme" onclick="themeclick('purple')"></button>
+                <button class="theme" onclick="themeclick('skin')"></button>
+            </div>
+        </nav>
+
+        <div class="alert alertnone">
+            <h2 id="alert">This is alert message</h2>
+        </div>
+
+
+        <div class="textform">
+            <h1>Text Word Counter</h1>
+            <div class="msgdiv">
+                <h2 class="m1"></h2>
+                <h3 class="msg"></h3>
+                <h3 class="Resulthead"></h3>
+                <h3 class="result"></h3>
+                <h4 class="totaltime"></h4>
+                <button id="close"><img src="./cancel.png" alt=""></button>
+            </div>
+            <textarea name="" id="textvalue" cols="30" rows="10"></textarea>
+            <div class="butttons">
+                <button class="btn" onclick='toUpperCase() '>Convert UpperCase</button>
+                <button class="btn" onclick='toLowerCase() '>Convert LowerCase</button>
+                <button class="btn" onclick='ClearText() '>ClearText</button>
+                <button class="btn" onclick='speak() '>Speak</button>
+                <button class="btn1" id="TypingpBTN" '>Typing Test</button>
+               
+            </div>
+            <p id="count">Total Characters is : 0 Total Words is : 0</p>
+        </div>
+
+
+
+        <div class="preview">
+            <button class="btn prev">Show Preview</button>
+            <div class="showprev">
+
+            </div>
+        </div>
+
+
+        <!-- FAQ FUNCTIONALITY -->
+        <div class="FaQ">
+
+            <div class="contain">
+                <div class="top">
+                    <input type="radio" id="check1" class="check" name="c" onclick="c()">
+                    <label for="check1">Why Use This Website</label>
+                    <label for="check1" class="arrow " onclick="c()"><img src="./arrow.png" alt=""></label>
+
+                </div>
+                <div class="checkshow ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis distinctio
+                    ab enim recusandae, sit id? Suscipit, voluptatibus modi quia minima magni quae ipsam soluta sed
+                    facilis aliquam velit at voluptatum blanditiis, eaque sunt laborum nam odio cum officia accusamus
+                    veniam delectus. Repudiandae, laboriosam saepe!</div>
+            </div>
+            <div class="contain">
+                <div class="top">
+                    <input type="radio" id="check2" class="check" name="c" onclick="c()">
+                    <label for="check2">Features Of this App</label>
+                    <label for="check2" class="arrow " onclick="c()"><img src="./arrow.png" alt=""></label>
+
+                </div>
+                <div class="checkshow ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maiores illum hic
+                    placeat at, sed qui ut doloribus ab fuga omnis veniam eius vitae assumenda. Eius!</div>
+            </div>
+            <div class="contain">
+                <div class="top">
+                    <input type="radio" id="check3" class="check" name="c" onclick="c()">
+                    <label for="check3">Upcoming Changes</label>
+                    <label for="check3" class="arrow " onclick="c()"><img src="./arrow.png" alt=""></label>
+                </div>
+                <div class="checkshow ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, dolores!
+                    Nulla corporis nesciunt numquam ex adipisci, possimus odio beatae perferendis dolorum veniam vel
+                    nihil nobis sit laudantium ea laboriosam laborum architecto? Aperiam enim quidem porro sapiente
+                    possimus dignissimos?</div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
